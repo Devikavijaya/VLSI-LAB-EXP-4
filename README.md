@@ -205,7 +205,7 @@ endmodule
 ```
 
 OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/fe181a92-ff3f-4b0d-86f3-d53bae52014c)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/480a9d8b-829c-4bc4-ab4c-024400c967c8)
 
 RESULT:
 ```
