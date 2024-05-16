@@ -48,7 +48,9 @@ COUNTER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
-VERILOG CODE D FLIP FLOP :-
+VERILOG CODE 
+```
+D FLIP FLOP :
 ```
 module dff(d,clk,rst,q);
 input d,clk,rst;
@@ -62,10 +64,10 @@ q=d;
 end
 endmodule
 ```
-OUTPUT WAVEFORM:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/24ea023f-9778-4ed9-b809-0b964ba2101b)
+OUTPUT
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/a56341ae-5e6c-4a92-bed2-fa365e5758b1)
 
-CODE JK FLIP FLOP:-
+CODE JK FLIP FLOP:
 ```
 module JK_flipflop (q, q_bar, j,k, clk, reset);
   input j,k,clk, reset;
@@ -87,8 +89,7 @@ module JK_flipflop (q, q_bar, j,k, clk, reset);
 endmodule
 ```
 OUTPUT:
-
- ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/b905e3b8-3ecc-43c6-b04a-2866284537c4)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/b4dfddde-4b10-4157-9f8c-8f8096eae5b8)
 
 CODE MOD 10 COUNTER:
 ```
@@ -107,9 +108,8 @@ counter_output <= 0;
 end
 endmodule
 ```
-OUTPUT
-
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/4665493a-2a02-4d53-aec1-62d7cfa5fc15)
+OUTPUT:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/d3120ea1-65e0-4171-8de3-45da494e7cdc)
 
 CODE RIPPLE COUNTER:
 ```
@@ -140,11 +140,10 @@ T_FF tff3(q[3], q[2], reset);
 endmodule
 ```
 OUTPUT:
-
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/400e791c-d8fd-43ea-9962-9c1979e474bb)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/78bb896a-f0d8-4c49-834d-2ecfe789195a)
 
 CODE SR FLIPFLOP :
-````
+```
 module SR_flipflop (q, q_bar, s,r, clk, reset);
   input s,r,clk, reset;
   output reg q;
@@ -165,8 +164,7 @@ module SR_flipflop (q, q_bar, s,r, clk, reset);
 endmodule
 ```
 OUTPUT:
-
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/456e3734-b7a7-4fea-bc83-df6c7070f426)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/6b5889a1-4067-4eff-af9e-e5560a99a1c7)
 
 CODE T FLIP FLOP :
 ```
@@ -185,7 +183,7 @@ module tff (t,clk, rstn,q);
 endmodule
 ```
 OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/ab3b053d-04e3-4be0-bf3a-aaf6565255dd)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/9b7819d3-8780-49ad-b972-230e5d8a7bc7)
 
 CODE UP DOWN COUNTER :
 ```
@@ -203,14 +201,18 @@ out=out-1;
 end
 endmodule
 ```
-
 OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/480a9d8b-829c-4bc4-ab4c-024400c967c8)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/0a8ce6e3-197b-4c69-918b-fcf979f536e0)
 
 RESULT:
-```
-   Simulate And Synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN is Successfully Verified using Vivado Software.
-```
+
+Simulate And Synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN is Successfully Verified using Vivado Software.
+
+
+
+
+
+
 
 
 
