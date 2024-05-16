@@ -187,7 +187,7 @@ endmodule
 OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/ab3b053d-04e3-4be0-bf3a-aaf6565255dd)
 
-CODE UP DOWN COUNTER :-
+CODE UP DOWN COUNTER :
 ```
 module updown_counter(clk,rst,updown,out);
 input clk,rst,updown;
@@ -209,7 +209,7 @@ OUTPUT:
 
 RESULT:
 ```
-Simulate And Synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN is Successfully Verified using Vivado Software.
+   Simulate And Synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN is Successfully Verified using Vivado Software.
 ```
 
 
