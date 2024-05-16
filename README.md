@@ -143,7 +143,7 @@ OUTPUT:
 
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/400e791c-d8fd-43ea-9962-9c1979e474bb)
 
-CODE: SR FLIPFLOP :-
+CODE SR FLIPFLOP :-
 ````
 module SR_flipflop (q, q_bar, s,r, clk, reset);
   input s,r,clk, reset;
@@ -205,8 +205,7 @@ endmodule
 ```
 
 OUTPUT:
-
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/381f0ac5-b9db-455e-9ac6-c0131eecfbff)
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/fe181a92-ff3f-4b0d-86f3-d53bae52014c)
 
 RESULT:
 ```
