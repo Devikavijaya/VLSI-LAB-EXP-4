@@ -139,7 +139,6 @@ T_FF tff2(q[2], q[1], reset);
 T_FF tff3(q[3], q[2], reset);
 endmodule
 ```
-
 # OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/78bb896a-f0d8-4c49-834d-2ecfe789195a)
 
