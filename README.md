@@ -1,15 +1,15 @@
 # VLSI-LAB-EXP-4
 SIMULATION AND IMPLEMENTATION OF SEQUENTIAL LOGIC CIRCUITS
 
-AIM:
+# AIM:
 ```
  To simulate and synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN using Xilinx ISE.
 ```
-APPARATUS REQUIRED:
+# APPARATUS REQUIRED:
 ```
 Vivado™ ML 2023.2
 ```
-PROCEDURE:
+# PROCEDURE:
 ```
 STEP:1  Start  the Xilinx navigator, Select and Name the New project.
 STEP:2  Select the device family, device, package and speed.       
@@ -23,9 +23,9 @@ STEP:9  In the Design Object List Window, enter the pin location for each pin in
 STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 ```
-LOGIC DIAGRAM
+# LOGIC DIAGRAM
 
-SR FLIPFLOP
+ SR FLIPFLOP
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/77fb7f38-5649-4778-a987-8468df9ea3c3)
 
@@ -48,8 +48,8 @@ COUNTER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
-VERILOG CODE:
-D FLIP FLOP :
+# VERILOG CODE:
+# D FLIP FLOP :
 ```
 module dff(d,clk,rst,q);
 input d,clk,rst;
@@ -63,10 +63,10 @@ q=d;
 end
 endmodule
 ```
-OUTPUT
+# OUTPUT
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/a56341ae-5e6c-4a92-bed2-fa365e5758b1)
 
-CODE JK FLIP FLOP:
+# CODE JK FLIP FLOP:
 ```
 module JK_flipflop (q, q_bar, j,k, clk, reset);
   input j,k,clk, reset;
@@ -88,10 +88,10 @@ module JK_flipflop (q, q_bar, j,k, clk, reset);
 endmodule
 ```
 
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/b4dfddde-4b10-4157-9f8c-8f8096eae5b8)
 
-CODE MOD 10 COUNTER:
+# CODE MOD 10 COUNTER:
 ```
 module counter(
 input clk,rst,enable,
@@ -108,10 +108,10 @@ counter_output <= 0;
 end
 endmodule
 ```
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/d3120ea1-65e0-4171-8de3-45da494e7cdc)
 
-CODE RIPPLE COUNTER:
+# CODE RIPPLE COUNTER:
 ```
 module D_FF(q, d, clk, reset);
 output q;
@@ -140,10 +140,10 @@ T_FF tff3(q[3], q[2], reset);
 endmodule
 ```
 
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/78bb896a-f0d8-4c49-834d-2ecfe789195a)
 
-CODE SR FLIPFLOP :
+# CODE SR FLIPFLOP :
 ```
 module SR_flipflop (q, q_bar, s,r, clk, reset);
   input s,r,clk, reset;
@@ -165,10 +165,10 @@ module SR_flipflop (q, q_bar, s,r, clk, reset);
 endmodule
 ```
 
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/6b5889a1-4067-4eff-af9e-e5560a99a1c7)
 
-CODE T FLIP FLOP :
+# CODE T FLIP FLOP :
 ```
 module tff (t,clk, rstn,q);  
  input t,clk, rstn;
@@ -185,10 +185,10 @@ module tff (t,clk, rstn,q);
 endmodule
 ```
 
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/9b7819d3-8780-49ad-b972-230e5d8a7bc7)
 
-CODE UP DOWN COUNTER :
+# CODE UP DOWN COUNTER :
 ```
 module updown_counter(clk,rst,updown,out);
 input clk,rst,updown;
@@ -204,10 +204,10 @@ out=out-1;
 end
 endmodule
 ```
-OUTPUT:
+# OUTPUT:
 ![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/0a8ce6e3-197b-4c69-918b-fcf979f536e0)
 
-RESULT:
+# RESULT:
 ```
 Simulate And Synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN is Successfully Verified using Vivado Software.
 ```
