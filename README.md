@@ -23,52 +23,37 @@ STEP:9  In the Design Object List Window, enter the pin location for each pin in
 STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 ```
-# LOGIC DIAGRAM
-
- SR FLIPFLOP
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/77fb7f38-5649-4778-a987-8468df9ea3c3)
-
-
-JK FLIPFLOP
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/1510e030-4ddc-42b1-88ce-d00f6f0dc7e6)
-
-T FLIPFLOP
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/7a020379-efb1-4104-85ee-439d660baa08)
-
-
-D FLIPFLOP
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/dda843c5-f0a0-4b51-93a2-eaa4b7fa8aa0)
-
-
-COUNTER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
-
-# VERILOG CODE:
-# D FLIP FLOP :
+# LOGIC DIAGRAM:
+# SR FLIPFLOP:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/a2c83e72-1d4e-4f9f-ad74-59e21f03f9d2)
+# CODE:
 ```
-module dff(d,clk,rst,q);
-input d,clk,rst;
-output reg q;
-always @(posedge clk)
-begin
-if (rst==1)
-q=1'b0;
-else
-q=d;
-end
+  module SR_flipflop (q, q_bar, s,r, clk, reset);
+  input s,r,clk, reset;
+  output reg q;
+  output q_bar;
+  always@(posedge clk) begin 
+    if(!reset)�        q <= 0;
+    else 
+  begin
+      case({s,r})
+        2'b00: q <= q;    
+        2'b01: q <= 1'b0; 
+        2'b10: q <= 1'b1; 
+        2'b11: q <= 1'bx; 
+      endcase
+    end
+  end
+  assign q_bar = ~q;
 endmodule
 ```
-# OUTPUT
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/a56341ae-5e6c-4a92-bed2-fa365e5758b1)
-
-# CODE JK FLIP FLOP:
+# OUTPUT:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/2b9dc1e9-45dd-4023-ac9f-29d3521b0cb7)
+# JK FLIPFLOP:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/4c21b463-86fd-42e5-bfe0-10beacd72de1)
+# CODE:
 ```
-module JK_flipflop (q, q_bar, j,k, clk, reset);
+  module JK_flipflop (q, q_bar, j,k, clk, reset);
   input j,k,clk, reset;
   output reg q;
   output q_bar;
@@ -87,10 +72,48 @@ module JK_flipflop (q, q_bar, j,k, clk, reset);
   assign q_bar = ~q;
 endmodule
 ```
-
 # OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/b4dfddde-4b10-4157-9f8c-8f8096eae5b8)
-
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/f4961dd1-2293-406f-a925-ae239c689930)
+# TFLIPFLOP:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/2bd5cc22-b9e8-43c5-bdfe-5e152c5e70e1)
+# CODE:
+```
+module tff (t,clk, rstn,q);  
+ input t,clk, rstn;
+ output reg q;
+  always @ (posedge clk) begin  
+    if (!rstn)  
+      q <= 0;  
+    else  
+        if (t)  
+            q <= ~q;  
+        else  
+            q <= q;  
+  end  
+endmodule
+```
+# OUTPUT:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/db7727a0-86ca-42fe-b408-0b12467ee926)
+# D FLIPFLOP:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/277830a5-23e3-4147-8af7-3cb5ea8eb55c)
+# CODE:
+```
+module dff(d,clk,rst,q);
+input d,clk,rst;
+output reg q;
+always @(posedge clk)
+begin
+if (rst==1)
+q=1'b0;
+else
+q=d;
+end
+endmodule
+```
+# OUTPUT
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/a56341ae-5e6c-4a92-bed2-fa365e5758b1)
+# COUNTER:
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/924f9f35-ac19-44b4-ad55-48d46fceff13)
 # CODE MOD 10 COUNTER:
 ```
 module counter(
@@ -109,8 +132,7 @@ end
 endmodule
 ```
 # OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/d3120ea1-65e0-4171-8de3-45da494e7cdc)
-
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/9dfcfb65-0e77-49dc-a64d-15f75f3854e2)
 # CODE RIPPLE COUNTER:
 ```
 module D_FF(q, d, clk, reset);
@@ -140,53 +162,8 @@ T_FF tff3(q[3], q[2], reset);
 endmodule
 ```
 # OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/78bb896a-f0d8-4c49-834d-2ecfe789195a)
 
-# CODE SR FLIPFLOP :
-```
-module SR_flipflop (q, q_bar, s,r, clk, reset);
-  input s,r,clk, reset;
-  output reg q;
-  output q_bar;
-  always@(posedge clk) begin 
-    if(!reset)�        q <= 0;
-    else 
-  begin
-      case({s,r})
-        2'b00: q <= q;    
-        2'b01: q <= 1'b0; 
-        2'b10: q <= 1'b1; 
-        2'b11: q <= 1'bx; 
-      endcase
-    end
-  end
-  assign q_bar = ~q;
-endmodule
-```
-
-# OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/6b5889a1-4067-4eff-af9e-e5560a99a1c7)
-
-# CODE T FLIP FLOP :
-```
-module tff (t,clk, rstn,q);  
- input t,clk, rstn;
- output reg q;
-  always @ (posedge clk) begin  
-    if (!rstn)  
-      q <= 0;  
-    else  
-        if (t)  
-            q <= ~q;  
-        else  
-            q <= q;  
-  end  
-endmodule
-```
-
-# OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/9b7819d3-8780-49ad-b972-230e5d8a7bc7)
-
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/c6f1f4e2-f1a1-483f-98eb-45281576b355)
 # CODE UP DOWN COUNTER :
 ```
 module updown_counter(clk,rst,updown,out);
@@ -204,7 +181,8 @@ end
 endmodule
 ```
 # OUTPUT:
-![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/0a8ce6e3-197b-4c69-918b-fcf979f536e0)
+
+![image](https://github.com/Devikavijaya/VLSI-LAB-EXP-4/assets/164987794/cc21bfe3-1e7a-47fe-b47d-0c35c4c078b2)
 
 # RESULT:
 ```
